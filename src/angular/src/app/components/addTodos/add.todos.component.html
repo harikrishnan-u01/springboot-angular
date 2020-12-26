@@ -1,0 +1,47 @@
+<h3>Add Todo:</h3>
+<div class="add-todo-container">
+  <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill" class="todo-form-control-container">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="description" formControlName="title" />
+    </mat-form-field>
+
+    <mat-checkbox
+      class="example-margin"
+      formControlName="completed"
+      class="todo-form-control-container"
+      >Checked</mat-checkbox
+    >
+
+    <button
+      mat-raised-button
+      type="submit"
+      [disabled]="!todoForm.valid"
+      class="todo-form-control-container"
+    >
+      Save
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="cancelAddTodo()"
+      class="todo-form-control-container"
+    >
+      Cancel
+    </button>
+  </form>
+
+  <mat-card *ngIf="savedData">
+    <mat-card-header>
+      <mat-card-title>Save Response</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div><strong>UserId:</strong> {{ savedData.userId }}</div>
+      <div><strong>Title:</strong> {{ savedData.title }}</div>
+      <div><strong>Completed:</strong> {{ savedData.completed }}</div>
+      <div><strong>Id:</strong> {{ savedData.id }}</div>
+    </mat-card-content></mat-card
+  >
+</div>

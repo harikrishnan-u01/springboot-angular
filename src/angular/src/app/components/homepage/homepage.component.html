@@ -1,0 +1,22 @@
+<h3>List of Todos:</h3>
+<div class="todo-container">
+  <label htmlFor="todo-not-completed"
+    >Todos:
+    <ol class="todo-list-container" id="todo-not-completed">
+      <li class="todo-list-item" *ngFor="let todo of todos; trackBy: trackById">
+        {{ todo.title | uppercase }}
+      </li>
+    </ol>
+  </label>
+  <label htmlFor="todo-not-completed"
+    >Completed Todos:
+    <ol class="todo-list-container" id="todo-completed">
+      <li
+        class="todo-list-item"
+        *ngFor="let todo of completedTodos; trackBy: trackById"
+      >
+        {{ todo.title | uppercase }}
+      </li>
+    </ol>
+  </label>
+</div>
