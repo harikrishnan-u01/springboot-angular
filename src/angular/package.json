@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm i && ng serve --open",
+    "local": "ng serve",
     "build": "ng build --base-href /dist/",
     "test": "ng test",
     "lint": "ng lint",

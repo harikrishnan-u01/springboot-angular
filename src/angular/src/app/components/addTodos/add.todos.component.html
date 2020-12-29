@@ -15,6 +15,7 @@
 
     <button
       mat-raised-button
+      color="primary"
       type="submit"
       [disabled]="!todoForm.valid"
       class="todo-form-control-container"
@@ -23,7 +24,6 @@
     </button>
     <button
       mat-raised-button
-      color="primary"
       type="button"
       (click)="cancelAddTodo()"
       class="todo-form-control-container"

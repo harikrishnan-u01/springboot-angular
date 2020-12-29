@@ -22,19 +22,19 @@
     >
     <a
       mat-tab-link
+      routerLink="grids"
+      [routerLinkActive]="['is-active']"
+      [active]="activeTab === 4"
+      (click)="activeTab = 4"
+      >Todo Grid</a
+    >
+    <a
+      mat-tab-link
       routerLink="charts"
       [routerLinkActive]="['is-active']"
       [active]="activeTab === 3"
       (click)="activeTab = 3"
       >Charts Playground</a
-    >
-    <a
-      mat-tab-link
-      routerLink="grids"
-      [routerLinkActive]="['is-active']"
-      [active]="activeTab === 4"
-      (click)="activeTab = 4"
-      >Grids Playground</a
     >
   </nav>
 

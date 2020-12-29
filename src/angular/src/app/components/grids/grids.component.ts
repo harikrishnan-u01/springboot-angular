@@ -9,7 +9,7 @@ import { ListTodoService } from "../../list.todo.service";
 })
 export default class GridsComponent implements OnInit {
   columnDefs: ColDef[] = [
-    { field: "id", sortable: true, filter: true },
+    { field: "id", sortable: true, filter: true, hide: true },
     { field: "userId", sortable: true, filter: true },
     {
       field: "title",

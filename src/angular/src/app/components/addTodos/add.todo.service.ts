@@ -14,9 +14,6 @@ export class AddTodoService {
   constructor(private httpClient: HttpClient) {}
 
   addTodo(body: TodoResponse): Observable<TodoResponse> {
-    return this.httpClient.post(
-      "https://jsonplaceholder.typicode.com/todos",
-      body
-    ) as Observable<TodoResponse>;
+    return this.httpClient.post("/api/todos", body) as Observable<TodoResponse>;
   }
 }
